@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/* 여백 초기화 */
+*{margin:0; padding:0;}
+/* a 링크 초기화 */
+a{text-decoration: none; color: #fff}
+/* 폰트 초기화 */
+body{font-family: 'Noto Sans', sans-serif; color: #fff}
+/* 블릿기호 초기화 */
+ul,li,ol {list-style:none;}
+
+/* SKIP */
+#skip{z-index:999;position:relative;width:100%;height:auto;font-size:0;}
+#skip>li>a{display:block;text-align:center;color:#fff;background:#000; padding:0;font-size:0}
+#skip>li>a:focus{padding:20px;font-size:16px;}
+
+/* 한글폰트 */
+@font-face {
+    font-family: 'MaplestoryOTFLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BCcardL';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.1/BCcardL.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LotteMartHappy';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff') format('woff');
+  }
+@font-face {
+    font-family: 'LotteMartHappy';
+    font-style: normal;
+    font-weight: 700;
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff') format('woff');
+}
+.lottemarthappy * {
+   font-family: 'LotteMartHappy', sans-serif;
+}
