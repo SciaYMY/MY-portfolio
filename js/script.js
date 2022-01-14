@@ -15,11 +15,17 @@ projectBox.hover(function(){
     let target=$(this);
     let pjImg=target.find('.image-wrap');
     let imgHeight=pjImg.find('.image').innerHeight();
-    console.log(imgHeight);
+    let icon=target.find('.icon');
+    let iconHeight=icon.find('img').innerHeight();
+    // console.log(iconHeight);
     pjImg.stop().animate({height: imgHeight}, 600);
+    icon.stop().animate({height: iconHeight}, 100);
 }, function(){
     let target=$(this);
     let pjImg=target.find('.image-wrap');
     let imgHeight=0;
-    pjImg.stop().animate({height: imgHeight}, 600);        
+    let icon=target.find('.icon');
+    let iconHeight=0;
+    pjImg.stop().animate({height: imgHeight}, 600);
+    icon.stop().animate({height: iconHeight}, 100);
 })
