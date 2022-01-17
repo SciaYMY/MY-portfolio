@@ -35,8 +35,14 @@ h1{font-family: 'Acme', sans-serif; font-size: var(--font-medium)}
 .profile>div{width: 1300px; padding: 6rem 2rem 3rem; /* background: #aaa */}
 .profile h2{top: 100px}
 .profile-wrap{display: flex; justify-content: space-around; height: 80vh; align-items: center}
-.profile-wrap .photo{width: 35%; height: 280px;  /* background: #ccc */}
+.profile-wrap .photo{width: 35%; /* height: 280px; */ height: 100%; display: flex; flex-direction: column; justify-content: flex-end; /* background: #ccc */}
+.profile-wrap .photo .photo-effect{position: relative; width: 290px; margin: 0 auto}
 .photo img{display: block; margin: 0 auto; border: 5px ridge #ffd700}
+.photo-effect .opa{position: absolute; top: 0; left: 0; width: 100%; height: 100%}
+.opa .hover_x1{width: 100%; height: 50%; position: absolute; top: 50%; left: 0; background: rgba(255, 255, 255, .5);}
+.opa .hover_x2{width: 100%; height: 50%; position: absolute; bottom: 50%; left: 0; background: rgba(255, 255, 255, .5);}
+.opa .hover_x3{width: 50%; height: 100%; position: absolute; top: 0; left: 50%; background: rgba(255, 255, 255, .5);}
+.opa .hover_x4{width: 50%; height: 100%; position: absolute; top: 0; right: 50%; background: rgba(255, 255, 255, .5);}
 .photo-info{text-align: center; margin: 1.8rem 0; font-family: 'Itim', cursive; font-size: var(--font-medium)}
 .photo-info span{font-family: 'MaplestoryOTFLight'; margin: 0 .8rem; font-size: 34px; letter-spacing: .3rem}
 .photo-info p{margin: .7rem 0}
@@ -64,9 +70,27 @@ h1{font-family: 'Acme', sans-serif; font-size: var(--font-medium)}
 .project{height: auto; position: relative}
 .project>div{padding: 3rem; box-sizing: border-box}
 .project h2{top: 0}
-.projects{padding: 2rem; display: flex; flex-wrap: wrap; justify-content: center; font-family: 'LotteMartHappy';font-size: var(--font-small); /* background: #aaa */}
-.projects .human-project{width: 100%; background: #333;}
-.projects .my-project{width: 100%; /* background: #999; */}
+.projects{display: flex; flex-wrap: wrap; justify-content: center; font-family: 'LotteMartHappy'; /* background: #aaa */}
+.projects .human-project{width: 100%; /* background: #333; */}
+.human-project h3{padding: 0 2rem; font-size: var(--font-small);}
+.human-project>ul{padding: 0.5rem 2rem; /* background: #666; */}
+.human-project a{color: #000}
+.human-project>ul>li{padding: 2rem 1.5rem 0; margin: .5rem; background: rgba(255, 255, 255, .7); border-radius: 2rem; color: #000; transition: 1s}
+.human-project>ul>li:hover{background: rgba(255, 255, 255, .9)}
+.human-project>ul>li h4{font-size: var(--font-medium)}
+.human-project>ul>li h4 i{margin: 0 1rem 0 .5rem}
+.human-project>ul>li .project-detail{display: flex; justify-content: space-between; padding: 2rem; font-size: 1.2rem}
+.human-project .project-text>p{margin-bottom: 2rem; line-height: 1.5; font-family: 'IM_Hyemin-Bold';}
+.human-project .text-wrap p{font-size: 1.4rem}
+.human-project .text-wrap ul{font-family: 'Patrick Hand', cursive; margin: 1rem 0 1rem 1.5rem}
+.human-project .text-wrap:not(.challenges) ul{display: flex; flex-wrap: wrap}
+.human-project .text-wrap ul li{margin: 0 .5rem .5rem}
+.human-project .text-wrap ul li.kor{font-family: 'IM_Hyemin-Bold';}
+.human-project .text-wrap:not(.challenges) ul li{background: #fff; border: 1px solid #aaa; padding: .3em 1em; border-radius: .5em;}
+.human-project .project-text .challenges ul{list-style: disc}
+.human-project .project-text .challenges ul li{list-style: disc}
+.human-project .project-detail>a{display: flex; align-items: end}
+.projects .my-project{width: 100%; padding: 2rem; /* background: #999; */}
 .projects>div h3{margin: 1rem 0}
 .my-project ul{display: flex}
 .my-project ul li{width: 33.33%; margin: 1rem; padding: 1rem; border-radius: 1rem 1rem 0 0; background: rgba(255, 255, 255, .7); transition: .5s}
@@ -76,9 +100,10 @@ h1{font-family: 'Acme', sans-serif; font-size: var(--font-medium)}
 /* .my-project ul li:hover a .image{height: auto; overflow: visible} */
 .my-project ul li a .image-wrap{position: relative}
 .my-project ul li a .image-wrap .image img{width: 100%; margin-top: 1rem; transition: .4s}
-.my-project ul li a .image-wrap .image:hover img{opacity: .2}
-.my-project ul li a .image-wrap .image-text{position: absolute; top: 0; font-size: 1rem; margin-top: 1rem; padding: 1rem; text-align: start; line-height: 1.8}
-.my-project ul li .icon{display: flex; justify-content: space-evenly; margin-top: .5rem}
+.my-project ul li a .image-wrap:hover .image img{opacity: .2}
+.my-project ul li a .image-wrap .image-text{position: absolute; top: 0; font-size: 1rem; margin-top: 1rem; padding: 1rem; text-align: start; line-height: 1.8; display: none}
+.my-project ul li a .image-wrap:hover .image-text{display: block}
+.my-project ul li .icon{display: flex; justify-content: space-evenly; margin-top: .5rem; height: 0; overflow: hidden}
 .my-project ul li .icon img{height: 2.5rem; opacity: .6}
 .my-project ul li .icon img:hover{opacity: 1}
 
@@ -91,6 +116,7 @@ h1{font-family: 'Acme', sans-serif; font-size: var(--font-medium)}
 }
 @media screen and (min-width: 100px) and (max-width: 1084px){
     .profile .photo-info p:first-child{font-size: 1.8rem}
+    .photo-info{margin: 1.2rem 0}
     .profile .photo-info span{display: block}
     .profile .desc .introduction{font-size: 1.1rem;}
     .profile-wrap .desc{justify-content: flex-end}
