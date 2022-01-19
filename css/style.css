@@ -72,6 +72,7 @@ h1{font-family: 'Acme', sans-serif; font-size: var(--font-medium)}
 .project h2{top: 0}
 .projects{display: flex; flex-wrap: wrap; justify-content: center; font-family: 'LotteMartHappy'; /* background: #aaa */}
 .projects h3{padding: 0 2rem; font-size: var(--font-small);}
+ /* HUMAN PROJECT */
 .projects .human-project{width: 100%; overflow: hidden; /* background: #333; */}
 .human-project>ul{width: 200%; box-sizing: border-box; position: relative; padding: 0.5rem 2rem; /* background: #666; */}
 .human-project>ul:after{content: ""; display: block; clear: both}
@@ -94,8 +95,7 @@ h1{font-family: 'Acme', sans-serif; font-size: var(--font-medium)}
 .human-project .project-text .challenges ul{list-style: disc}
 .human-project .project-text .challenges ul li{list-style: disc}
 .human-project .project-detail>a{display: flex; align-items: end}
-
-
+ /* MY PROJECT */
 .projects .my-project{width: 100%; padding: 2rem; /* background: #999; */}
 .projects>div h3{margin: 1rem 0}
 .my-project ul{display: flex; font-size: var(--font-small)}

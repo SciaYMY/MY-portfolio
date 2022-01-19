@@ -30,6 +30,7 @@ photoEffect();
 
 // HUMAN PROJECT ANIMATION
 function humanAni(){
+    const aniMax=$('.human-project>ul')
     $('.pj1').hover(function(){
         $(this).stop().animate({width: '47.99%'}, 500);
         $(this).find('.project-detail').addClass('pj-s')
@@ -39,20 +40,20 @@ function humanAni(){
     });
     $('.pj2').hover(function(){
         $(this).stop().animate({width: '47.99%', left: 0}, 500)
-        $(this).parent().stop().animate({left: '-31.95%'}, 500)
+        aniMax.stop().animate({left: '-31.95%'}, 500)
         $(this).find('.project-detail').addClass('pj-s')
     }, function(){
         $(this).stop().animate({width: '15.55%'}, 500)
-        $(this).parent().stop().animate({left: 0}, 500)
+        aniMax.stop().animate({left: 0}, 500)
         $(this).find('.project-detail').removeClass('pj-s')
     });
     $('.pj3').hover(function(){
         $(this).stop().animate({width: '47.99%', left: 0}, 500)
-        $(this).parent().stop().animate({left: '-63.1%'}, 500)
+        aniMax.stop().animate({left: '-63.1%'}, 500)
         $(this).find('.project-detail').addClass('pj-s')
     }, function(){
         $(this).stop().animate({width: '15.55%'}, 500)
-        $(this).parent().stop().animate({left: 0}, 500)
+        aniMax.stop().animate({left: 0}, 500)
         $(this).find('.project-detail').removeClass('pj-s')
     });
 }
