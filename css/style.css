@@ -94,7 +94,13 @@ h1{font-family: 'Acme', sans-serif; font-size: var(--font-medium)}
 .human-project .text-wrap:not(.challenges) ul li{background: #fff; border: 1px solid #aaa; padding: .3em 1em; border-radius: .5em;}
 .human-project .project-text .challenges ul{list-style: disc}
 .human-project .project-text .challenges ul li{list-style: disc}
-.human-project .project-detail>a{display: flex; align-items: end}
+.human-project .project-detail .project-link{display: flex; flex-direction: column; justify-content: space-between}
+.human-project .project-detail .project-link .linkicon{display: none}
+.human-project .project-detail.pj-s .project-link .linkicon{display: block; display:flex; justify-content: flex-end}
+.human-project .project-link .linkicon a img{display: block; margin-right: 1.5rem}
+.human-project .project-link .linkicon img{height: 2.5rem; opacity: .6}
+.human-project .project-link .linkicon img:hover{opacity: 1}
+/* .human-project .project-detail .project-link>a{display: block} */
  /* MY PROJECT */
 .projects .my-project{width: 100%; padding: 2rem; /* background: #999; */}
 .projects>div h3{margin: 1rem 0}
