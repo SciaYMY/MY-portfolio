@@ -3,7 +3,7 @@
 /* 'Acme' 'Patrick Hand' 'Poiret One' 'Poor Story' */
 /* LAYOUT */
 #wrap{background: url(../IMG_0215.JPG)}
-#nav{width: 100%; height: 80px; position: fixed; z-index:2; /* background: #333 */}
+#nav{width: 100%; height: 80px; position: fixed; z-index: 5; /* background: #333 */}
 #main{width: 100%;}
 article{width: 100%;}
 /* COMMEN */
@@ -11,7 +11,7 @@ article{width: 100%;}
 h2{font-family: 'Poiret One', cursive; text-transform: capitalize; font-size: 5rem; color: rgba(255, 255, 255, .3); letter-spacing: 2rem; position: absolute; top: 0; left: 8%}
 /* VARIABLE */
 :root{
-    --white-color: #fff; --black-color: #222;
+    --white-color: #fff; --black-color: #222; --blue-color: #ddecff; --pink-color: #ffe6ff;
     --font-large: 48px; --font-medium: 2rem; --font-small: 1.5rem;
     --font-title: 'Black Han Sans', sans-serif;
     --margin: 64px; --section-padding: 64px 32px 46px; --margin-interval: 10px;
@@ -77,21 +77,28 @@ h1{font-family: 'Acme', sans-serif; font-size: var(--font-medium)}
 .human-project>ul{width: 200%; box-sizing: border-box; position: relative; padding: 0.5rem 2rem; /* background: #666; */}
 .human-project>ul:after{content: ""; display: block; clear: both}
 .human-project a{color: #000}
-.human-project>ul>li{height: 642px; float: left; width: 15.55%; box-sizing: border-box; padding: 2rem 1.5rem 0; margin: .5rem; background: rgba(255, 255, 255, .7); border-radius: 2rem; color: #000; transition: 1s}
+.human-project>ul>li{height: 642px; float: left; width: 15.55%; box-sizing: border-box; padding: 2rem 1.5rem 0; margin: .5rem; background: rgba(255, 255, 255, .7); border-radius: 2rem; color: #000; transition: 1s; position: relative}
 .human-project>ul>li:hover{background: rgba(255, 255, 255, .9)}
 .human-project>ul>li h4{font-size: var(--font-medium)}
 .human-project>ul>li h4 i{margin: 0 1rem 0 .5rem}
-.human-project>ul>li .project-detail{padding: 2rem; font-size: 1.2rem; display: block; overflow: hidden}
-.human-project>ul>li .project-detail.pj-s{display: flex; justify-content: space-between}
-.human-project .project-detail.pj-s .project-text .text-wrap{display: block}
-.human-project .project-detail .project-text .text-wrap{display: none}
+.human-project>ul>li .project-detail{padding: 2rem; font-size: 1.2rem; display: block; overflow: hidden;}
+.human-project>ul>li .project-detail.pj-s{display: flex; justify-content: space-between; height: 83.3%}
 .human-project .project-text>p{margin-bottom: 2rem; line-height: 1.5; font-family: 'IM_Hyemin-Bold';}
+.human-project .project-detail .project-text .text-wrap{display: none}
+.human-project .project-detail.pj-s .project-text .text-wrap{display: block}
 .human-project .text-wrap p{font-size: 1.4rem}
 .human-project .text-wrap ul{font-family: 'Patrick Hand', cursive; margin: 1rem 0 1rem 1.5rem}
 .human-project .text-wrap:not(.challenges) ul{display: flex; flex-wrap: wrap}
 .human-project .text-wrap ul li{margin: 0 .5rem .5rem}
 .human-project .text-wrap ul li.kor{font-family: 'IM_Hyemin-Bold';}
 .human-project .text-wrap:not(.challenges) ul li{background: #fff; border: 1px solid #aaa; padding: .3em 1em; border-radius: .5em;}
+.human-project .text-wrap ul li.strong-blue{transition: .5s}
+.human-project .project-text:hover ul li.strong-blue{background: var(--blue-color)}
+.human-project .text-wrap ul li .highlight{display: inline-block; position: relative; z-index: 0}
+.human-project .text-wrap ul li .highlight:after{content:''; width: 0; height: 12px; position: absolute; left: 0; bottom: 0; z-index: -1; transition: .5s}
+.human-project .pj1 .text-wrap ul li .highlight-blue:after{background: var(--blue-color); content:''; width: 0; height: 12px; position: absolute; left: 0; bottom: 0; z-index: -1; transition: .5s}
+/* .human-project .pj2 .text-wrap ul li .highlight-pink:after{background: var(--blue-color); content:''; width: 0; height: 12px; position: absolute; left: 0; bottom: 0; z-index: -1; transition: .5s} */
+.human-project .project-text:hover ul li .highlight-blue:after{width: 100%}
 .human-project .project-text .challenges ul{list-style: disc}
 .human-project .project-text .challenges ul li{list-style: disc}
 .human-project .project-detail .project-link{display: flex; flex-direction: column; justify-content: space-between}
@@ -100,24 +107,24 @@ h1{font-family: 'Acme', sans-serif; font-size: var(--font-medium)}
 .human-project .project-link .linkicon a img{display: block; margin-right: 1.5rem}
 .human-project .project-link .linkicon img{height: 2.5rem; opacity: .6}
 .human-project .project-link .linkicon img:hover{opacity: 1}
-/* .human-project .project-detail .project-link>a{display: block} */
+.balloon{background: wheat; padding: 10px; position: absolute; display: none;}
  /* MY PROJECT */
 .projects .my-project{width: 100%; padding: 2rem; /* background: #999; */}
 .projects>div h3{margin: 1rem 0}
-.my-project ul{display: flex; font-size: var(--font-small)}
-.my-project ul li{width: 33.33%; margin: 1rem; padding: 1rem; border-radius: 1rem 1rem 0 0; background: rgba(255, 255, 255, .7); transition: .5s}
-.my-project ul li:hover{background: #fff}
-.my-project ul li a{color: #000; display: block; text-align: center}
-.my-project ul li a .image-wrap{height: 0; overflow: hidden}
+.my-project>ul{display: flex; font-size: var(--font-small)}
+.my-project>ul>li{width: 33.33%; margin: 1rem; padding: 1rem; border-radius: 1rem 1rem 0 0; background: rgba(255, 255, 255, .7); transition: .5s}
+.my-project>ul>li:hover{background: #fff}
+.my-project>ul>li a{color: #000; display: block; text-align: center}
+.my-project>ul>li a .image-wrap{height: 0; overflow: hidden}
 /* .my-project ul li:hover a .image{height: auto; overflow: visible} */
-.my-project ul li a .image-wrap{position: relative}
-.my-project ul li a .image-wrap .image img{width: 100%; margin-top: 1rem; transition: .4s}
-.my-project ul li a .image-wrap:hover .image img{opacity: .2}
-.my-project ul li a .image-wrap .image-text{position: absolute; top: 0; font-size: 1rem; margin-top: 1rem; padding: 1rem; text-align: start; line-height: 1.8; display: none}
-.my-project ul li a .image-wrap:hover .image-text{display: block}
-.my-project ul li .icon{display: flex; justify-content: space-evenly; margin-top: .5rem; height: 0; overflow: hidden}
-.my-project ul li .icon img{height: 2.5rem; opacity: .6}
-.my-project ul li .icon img:hover{opacity: 1}
+.my-project>ul>li a .image-wrap{position: relative}
+.my-project>ul>li a .image-wrap .image img{width: 100%; margin-top: 1rem; transition: .4s}
+.my-project>ul>li a .image-wrap:hover .image img{opacity: .2}
+.my-project>ul>li a .image-wrap .image-text{position: absolute; top: 0; font-size: 1rem; margin-top: 1rem; padding: 1rem; text-align: start; line-height: 1.8; display: none}
+.my-project>ul>li a .image-wrap:hover .image-text{display: block}
+.my-project>ul>li .icon{display: flex; justify-content: space-evenly; margin-top: .5rem; height: 0; overflow: hidden}
+.my-project>ul>li .icon img{height: 2.5rem; opacity: .6}
+.my-project>ul>li .icon img:hover{opacity: 1}
 
 
 /* #fcfbd8 */
