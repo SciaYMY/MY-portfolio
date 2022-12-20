@@ -108,6 +108,14 @@ h1{font-family: 'Acme', sans-serif; font-size: var(--font-medium)}
 .human-project .project-link .linkicon img{height: 2.5rem; opacity: .6}
 .human-project .project-link .linkicon img:hover{opacity: 1}
 .balloon{background: wheat; padding: 10px; position: absolute; display: none;}
+
+/* Alpaco PROJECT */
+.projects .alpaco-project{width: 100%; overflow: hidden; /* background: #333; */}
+.alpaco-project>ul>li{height: 200px; float: left; width: 15.55%; box-sizing: border-box; padding: 2rem 1.5rem 0; margin: .5rem; background: rgba(255, 255, 255, .7); border-radius: 2rem; color: #000; transition: 1s; position: relative}
+.alpaco-project>ul>li h4{font-size: var(--font-medium)}
+.alpaco-project .project-text>p{margin-bottom: 2rem; line-height: 1.5; font-family: 'IM_Hyemin-Bold';}
+
+
  /* MY PROJECT */
 .projects .my-project{width: 100%; padding: 2rem; /* background: #999; */}
 .projects>div h3{margin: 1rem 0}
