@@ -72,16 +72,16 @@ h1{font-family: 'Acme', sans-serif; font-size: var(--font-medium)}
 .project h2{top: 0}
 .projects{display: flex; flex-wrap: wrap; justify-content: center; font-family: 'LotteMartHappy'; /* background: #aaa */}
 .projects h3{padding: 0 2rem; font-size: var(--font-small);}
+.projects a{color: #000}
  /* HUMAN PROJECT */
-.projects .human-project{width: 100%; overflow: hidden; /* background: #333; */}
+.projects .human-project{width: 100%; height: 716px; overflow: hidden; /* background: #333; */}
 .human-project>ul{width: 200%; box-sizing: border-box; position: relative; padding: 0.5rem 2rem; /* background: #666; */}
 .human-project>ul:after{content: ""; display: block; clear: both}
-.human-project a{color: #000}
-.human-project>ul>li{height: 642px; float: left; width: 15.55%; box-sizing: border-box; padding: 2rem 1.5rem 0; margin: .5rem; background: rgba(255, 255, 255, .7); border-radius: 2rem; color: #000; transition: 1s; position: relative}
+.human-project>ul>li{height: 620px; float: left; width: 15.55%; box-sizing: border-box; padding: 2rem 1.5rem 0; margin: .5rem; background: rgba(255, 255, 255, .7); border-radius: 2rem; color: #000; transition: 1s; position: relative}
 .human-project>ul>li:hover{background: rgba(255, 255, 255, .9)}
 .human-project>ul>li h4{font-size: var(--font-medium)}
 .human-project>ul>li h4 i{margin: 0 1rem 0 .5rem}
-.human-project>ul>li .project-detail{padding: 2rem; font-size: 1.2rem; display: block; overflow: hidden;}
+.human-project>ul>li .project-detail{padding: 1rem 2rem; font-size: 1.2rem; display: block; overflow: hidden;}
 .human-project>ul>li .project-detail.pj-s{display: flex; justify-content: space-between; height: 83.3%}
 .human-project .project-text>p{margin-bottom: 2rem; line-height: 1.5; font-family: 'IM_Hyemin-Bold';}
 .human-project .project-detail .project-text .text-wrap{display: none}
@@ -110,10 +110,36 @@ h1{font-family: 'Acme', sans-serif; font-size: var(--font-medium)}
 .balloon{background: wheat; padding: 10px; position: absolute; display: none;}
 
 /* Alpaco PROJECT */
-.projects .alpaco-project{width: 100%; overflow: hidden; /* background: #333; */}
-.alpaco-project>ul>li{height: 200px; float: left; width: 15.55%; box-sizing: border-box; padding: 2rem 1.5rem 0; margin: .5rem; background: rgba(255, 255, 255, .7); border-radius: 2rem; color: #000; transition: 1s; position: relative}
+.projects .alpaco-project{width: 100%; /* height: 738px; */ overflow: hidden; /* background: #333; */}
+.alpaco-project>ul{width: 200%; box-sizing: border-box; position: relative; padding: 0.5rem 2rem; /* background: #666; */;}
+.alpaco-project>ul>li{/* height: 200px; */ float: left; width: 16.33%; margin: .5rem 0; color: #000; transition: 1s; position: relative; /* background: red; */}
+.alpaco-project>ul>li:hover .project-wrap{background: rgba(255, 255, 255, .9)}
+.alpaco-project>ul>li .project-wrap{margin: 0 .5rem; padding: 2rem 1.5rem 0; border-radius: 2rem; background: rgba(255, 255, 255, .7)}
+
 .alpaco-project>ul>li h4{font-size: var(--font-medium)}
+.alpaco-project>ul>li h4 i{margin: 0 1rem 0 .5rem}
+.alpaco-project>ul>li .project-detail{padding: 1rem 2rem; font-size: 1.2rem; display: block; overflow: hidden;}
+.alpaco-project>ul>li .project-detail.pj-s{display: flex; justify-content: space-between; /* height: 83.3% */}
 .alpaco-project .project-text>p{margin-bottom: 2rem; line-height: 1.5; font-family: 'IM_Hyemin-Bold';}
+.alpaco-project .project-detail .project-text .text-wrap{display: none}
+.alpaco-project .project-detail.pj-s .project-text .text-wrap{display: block}
+.alpaco-project .text-wrap p{font-size: 1.4rem}
+.alpaco-project .text-wrap ul{font-family: 'Patrick Hand', cursive; margin: 1rem 0 1rem 1.5rem}
+.alpaco-project .text-wrap:not(.challenges) ul{display: flex; flex-wrap: wrap}
+.alpaco-project .text-wrap ul li{margin: 0 .5rem .5rem}
+.alpaco-project .text-wrap ul li.kor{font-family: 'IM_Hyemin-Bold';}
+.alpaco-project .text-wrap:not(.challenges) ul li{background: #fff; border: 1px solid #aaa; padding: .3em 1em; border-radius: .5em;}
+.alpaco-project .text-wrap ul li.strong-blue{transition: .5s}
+.alpaco-project .project-text:hover ul li.strong-blue{background: var(--blue-color)}
+.alpaco-project .project-text .challenges ul{list-style: disc}
+.alpaco-project .project-text .challenges ul li{list-style: disc}
+
+.alpaco-project .project-detail .project-link .linkicon{display: none}
+.alpaco-project .project-detail.pj-s .project-link .linkicon{display: block; display:flex; justify-content: flex-end}
+.alpaco-project .project-link .linkicon img{height: 2.5rem; opacity: .6}
+.alpaco-project .project-link .linkicon img:hover{opacity: 1}
+
+
 
 
  /* MY PROJECT */
@@ -122,7 +148,7 @@ h1{font-family: 'Acme', sans-serif; font-size: var(--font-medium)}
 .my-project>ul{display: flex; font-size: var(--font-small)}
 .my-project>ul>li{width: 33.33%; margin: 1rem; padding: 1rem; border-radius: 1rem 1rem 0 0; background: rgba(255, 255, 255, .7); transition: .5s}
 .my-project>ul>li:hover{background: #fff}
-.my-project>ul>li a{color: #000; display: block; text-align: center}
+.my-project>ul>li a{display: block; text-align: center}
 .my-project>ul>li a .image-wrap{height: 0; overflow: hidden}
 /* .my-project ul li:hover a .image{height: auto; overflow: visible} */
 .my-project>ul>li a .image-wrap{position: relative}

@@ -29,34 +29,50 @@ function photoEffect(){
 photoEffect();
 //HUMAN PROJECT ANIMATION
 function humanAni(){
-    const aniMax=$('.human-project>ul')
-    $('.pj1').hover(function(){
-        $(this).stop().animate({width: '47.99%'}, 500);
-        $(this).find('.project-detail').addClass('pj-s')
-    }, function(){
-        $(this).stop().animate({width: '15.55%'}, 50)
-        $(this).find('.project-detail').removeClass('pj-s')
-    });
+    // const aniMax = $('.human-project>ul');
+    const aniMax = $('.hover-slide>ul');
+    $('.pj1').hover(
+      function () {
+        $(this).stop().animate({ width: '49%' }, 500);
+        $(this).find('.project-detail').addClass('pj-s');
+      },
+      function () {
+        $(this).stop().animate({ width: '16.33%' }, 50);
+        $(this).find('.project-detail').removeClass('pj-s');
+      }
+    );
+    $('.alpaco-project .pj1').hover(
+      function () {
+        $(this).stop().animate({ width: '49%' }, 500);
+        // $('.pj1').stop().animate({ width: '47.99%' }, 500);
+        $(this).find('.project-detail').addClass('pj-s');
+      },
+      function () {
+        $(this).stop().animate({ width: '16.33%' }, 50);
+        $(this).find('.project-detail').removeClass('pj-s');
+      }
+    );
     $('.pj2').hover(function(){
-        $(this).stop().animate({width: '47.99%', left: 0}, 500)
-        aniMax.stop().animate({left: '-31.95%'}, 300)
+        $(this).stop().animate({width: '49%', left: 0}, 500)
+        aniMax.stop().animate({left: '-32.2%'}, 300)
         $(this).find('.project-detail').addClass('pj-s')
     }, function(){
-        $(this).stop().animate({width: '15.55%'}, 50)
+        $(this).stop().animate({width: '16.33%'}, 50)
         aniMax.stop().animate({left: 0}, 300)
         $(this).find('.project-detail').removeClass('pj-s')
     });
     $('.pj3').hover(function(){
-        $(this).stop().animate({width: '47.99%', left: 0}, 500)
-        aniMax.stop().animate({left: '-63.1%'}, 300)
+        $(this).stop().animate({width: '49%', left: 0}, 500)
+        aniMax.stop().animate({left: '-64.2%'}, 300)
         $(this).find('.project-detail').addClass('pj-s')
     }, function(){
-        $(this).stop().animate({width: '15.55%'}, 50)
+        $(this).stop().animate({width: '16.33%'}, 50)
         aniMax.stop().animate({left: 0}, 300)
         $(this).find('.project-detail').removeClass('pj-s')
     });
 }
 humanAni();
+
 //HUMAN PROJECT TOOLTIP  (정확한 개념 정리 후 수정 필요)
 let balloon=$('<div class="balloon"><div>').appendTo('.human-project>ul>li');
 function updateBalloonPosition(x, y){
