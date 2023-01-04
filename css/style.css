@@ -11,7 +11,7 @@ article{width: 100%;}
 h2{font-family: 'Poiret One', cursive; text-transform: capitalize; font-size: 5rem; color: rgba(255, 255, 255, .3); letter-spacing: 2rem; position: absolute; top: 0; left: 8%}
 /* VARIABLE */
 :root{
-    --white-color: #fff; --black-color: #222; --blue-color: #ddecff; --pink-color: #ffe6ff;
+    --white-color: #fff; --black-color: #222; --blue-color: #ddecff; --pink-color: #ffe6ff; --green-color: #d9ffd8;
     --font-large: 48px; --font-medium: 2rem; --font-small: 1.5rem;
     --font-title: 'Black Han Sans', sans-serif;
     --margin: 64px; --section-padding: 64px 32px 46px; --margin-interval: 10px;
@@ -73,32 +73,42 @@ h1{font-family: 'Acme', sans-serif; font-size: var(--font-medium)}
 .projects{display: flex; flex-wrap: wrap; justify-content: center; font-family: 'LotteMartHappy'; /* background: #aaa */}
 .projects h3{padding: 0 2rem; font-size: var(--font-small);}
 .projects a{color: #000}
+/* HOVER SLIDE */
+.projects .hover-slide{width: 100%; overflow: hidden; /* background: #333; */}
+.hover-slide>ul{width: 200%; box-sizing: border-box; position: relative; left: 0; padding: 0.5rem 2rem; /* background: #666; */}
+    /* ul의 left 값의 유무에 따라 slide가 튕김 / hover가 아닌 mouseover */
+.hover-slide>ul>li{float: left; width: 16.33%; margin: .5rem 0; transition: 1s; color: #000; position: relative; /* background: red; */}
+.hover-slide>ul>li .project-wrap{margin: 0 .5rem 16px; padding: 2rem 1.5rem 0; border-radius: 2rem; background: rgba(255, 255, 255, .7)}
+.hover-slide>ul>li:hover .project-wrap{background: rgba(255, 255, 255, .9)}
+.hover-slide>ul>li h4{font-size: var(--font-medium)}
+.hover-slide>ul>li h4 i{margin: 0 1rem 0 .5rem}
+.hover-slide>ul>li .project-detail{padding: 1rem 2rem; font-size: 1.2rem; display: block; overflow: hidden;}
+.hover-slide>ul>li .project-detail.pj-s{display: flex; justify-content: space-between;}
+.hover-slide .project-text>p{margin-bottom: 2rem; line-height: 1.5; font-family: 'IM_Hyemin-Bold';}
+.hover-slide .project-detail .project-text .text-wrap{display: none}
+.hover-slide .project-detail.pj-s .project-text .text-wrap{display: block}
+.hover-slide .text-wrap p{font-size: 1.4rem}
+.hover-slide .text-wrap ul{font-family: 'Patrick Hand', cursive; margin: 1rem 0 1rem 1.5rem}
+.hover-slide .text-wrap:not(.challenges) ul{display: flex; flex-wrap: wrap}
+.hover-slide .text-wrap ul li{margin: 0 .5rem .5rem}
+.hover-slide .text-wrap ul li.kor{font-family: 'IM_Hyemin-Bold';}
+.hover-slide .text-wrap:not(.challenges) ul li{background: #fff; border: 1px solid #aaa; padding: .3em 1em; border-radius: .5em;}
+.hover-slide .text-wrap ul li.strong{transition: .5s}
+
+
  /* HUMAN PROJECT */
-.projects .human-project{width: 100%; height: 716px; overflow: hidden; /* background: #333; */}
-.human-project>ul{width: 200%; box-sizing: border-box; position: relative; padding: 0.5rem 2rem; /* background: #666; */}
+.projects .human-project{height: 716px;}
 .human-project>ul:after{content: ""; display: block; clear: both}
-.human-project>ul>li{height: 620px; float: left; width: 15.55%; box-sizing: border-box; padding: 2rem 1.5rem 0; margin: .5rem; background: rgba(255, 255, 255, .7); border-radius: 2rem; color: #000; transition: 1s; position: relative}
-.human-project>ul>li:hover{background: rgba(255, 255, 255, .9)}
-.human-project>ul>li h4{font-size: var(--font-medium)}
-.human-project>ul>li h4 i{margin: 0 1rem 0 .5rem}
-.human-project>ul>li .project-detail{padding: 1rem 2rem; font-size: 1.2rem; display: block; overflow: hidden;}
-.human-project>ul>li .project-detail.pj-s{display: flex; justify-content: space-between; height: 83.3%}
-.human-project .project-text>p{margin-bottom: 2rem; line-height: 1.5; font-family: 'IM_Hyemin-Bold';}
-.human-project .project-detail .project-text .text-wrap{display: none}
-.human-project .project-detail.pj-s .project-text .text-wrap{display: block}
-.human-project .text-wrap p{font-size: 1.4rem}
-.human-project .text-wrap ul{font-family: 'Patrick Hand', cursive; margin: 1rem 0 1rem 1.5rem}
-.human-project .text-wrap:not(.challenges) ul{display: flex; flex-wrap: wrap}
-.human-project .text-wrap ul li{margin: 0 .5rem .5rem}
-.human-project .text-wrap ul li.kor{font-family: 'IM_Hyemin-Bold';}
-.human-project .text-wrap:not(.challenges) ul li{background: #fff; border: 1px solid #aaa; padding: .3em 1em; border-radius: .5em;}
-.human-project .text-wrap ul li.strong-blue{transition: .5s}
+.human-project>ul>li .project-wrap{height: 580px;}
+.human-project>ul>li .project-detail.pj-s{height: 83.3%}
 .human-project .project-text:hover ul li.strong-blue{background: var(--blue-color)}
+
 .human-project .text-wrap ul li .highlight{display: inline-block; position: relative; z-index: 0}
 .human-project .text-wrap ul li .highlight:after{content:''; width: 0; height: 12px; position: absolute; left: 0; bottom: 0; z-index: -1; transition: .5s}
 .human-project .pj1 .text-wrap ul li .highlight-blue:after{background: var(--blue-color); content:''; width: 0; height: 12px; position: absolute; left: 0; bottom: 0; z-index: -1; transition: .5s}
-/* .human-project .pj2 .text-wrap ul li .highlight-pink:after{background: var(--blue-color); content:''; width: 0; height: 12px; position: absolute; left: 0; bottom: 0; z-index: -1; transition: .5s} */
 .human-project .project-text:hover ul li .highlight-blue:after{width: 100%}
+.human-project .pj2 .text-wrap ul li .highlight-pink:after{background: var(--pink-color); content:''; width: 0; height: 12px; position: absolute; left: 0; bottom: 0; z-index: -1; transition: .5s}
+.human-project .project-text:hover ul li .highlight-pink:after{width: 100%}
 .human-project .project-text .challenges ul{list-style: disc}
 .human-project .project-text .challenges ul li{list-style: disc}
 .human-project .project-detail .project-link{display: flex; flex-direction: column; justify-content: space-between}
@@ -110,27 +120,9 @@ h1{font-family: 'Acme', sans-serif; font-size: var(--font-medium)}
 .balloon{background: wheat; padding: 10px; position: absolute; display: none;}
 
 /* Alpaco PROJECT */
-.projects .alpaco-project{width: 100%; /* height: 738px; */ overflow: hidden; /* background: #333; */}
-.alpaco-project>ul{width: 200%; box-sizing: border-box; position: relative; padding: 0.5rem 2rem; /* background: #666; */;}
-.alpaco-project>ul>li{/* height: 200px; */ float: left; width: 16.33%; margin: .5rem 0; color: #000; transition: 1s; position: relative; /* background: red; */}
-.alpaco-project>ul>li:hover .project-wrap{background: rgba(255, 255, 255, .9)}
-.alpaco-project>ul>li .project-wrap{margin: 0 .5rem; padding: 2rem 1.5rem 0; border-radius: 2rem; background: rgba(255, 255, 255, .7)}
+.alpaco-project>ul>li{/* height: 200px; */}
 
-.alpaco-project>ul>li h4{font-size: var(--font-medium)}
-.alpaco-project>ul>li h4 i{margin: 0 1rem 0 .5rem}
-.alpaco-project>ul>li .project-detail{padding: 1rem 2rem; font-size: 1.2rem; display: block; overflow: hidden;}
-.alpaco-project>ul>li .project-detail.pj-s{display: flex; justify-content: space-between; /* height: 83.3% */}
-.alpaco-project .project-text>p{margin-bottom: 2rem; line-height: 1.5; font-family: 'IM_Hyemin-Bold';}
-.alpaco-project .project-detail .project-text .text-wrap{display: none}
-.alpaco-project .project-detail.pj-s .project-text .text-wrap{display: block}
-.alpaco-project .text-wrap p{font-size: 1.4rem}
-.alpaco-project .text-wrap ul{font-family: 'Patrick Hand', cursive; margin: 1rem 0 1rem 1.5rem}
-.alpaco-project .text-wrap:not(.challenges) ul{display: flex; flex-wrap: wrap}
-.alpaco-project .text-wrap ul li{margin: 0 .5rem .5rem}
-.alpaco-project .text-wrap ul li.kor{font-family: 'IM_Hyemin-Bold';}
-.alpaco-project .text-wrap:not(.challenges) ul li{background: #fff; border: 1px solid #aaa; padding: .3em 1em; border-radius: .5em;}
-.alpaco-project .text-wrap ul li.strong-blue{transition: .5s}
-.alpaco-project .project-text:hover ul li.strong-blue{background: var(--blue-color)}
+.alpaco-project .project-text:hover ul li.strong-green{background: var(--green-color)}
 .alpaco-project .project-text .challenges ul{list-style: disc}
 .alpaco-project .project-text .challenges ul li{list-style: disc}
 
